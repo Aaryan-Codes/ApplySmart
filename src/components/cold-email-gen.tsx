@@ -32,12 +32,11 @@ export default function ColdEmailGenerator() {
   const [isGenerating, setIsGenerating] = useState<boolean>(false);
   const [isDialogOpen, setIsDialogOpen] = useState<boolean>(false);
   const [isLinkedIn, setIsLinkedIn] = useState<boolean>(false);
-  const API_KEY = process.env.NEXT_PUBLIC_GOOLGE_AI_API_KEY
 
   const initializeChat = async (formData: FormData) => {
     setIsGenerating(true);
     const genAI = new GoogleGenerativeAI(
-      API_KEY as string
+      "AIzaSyD_KgmKP1pc-Z6mtTIJQ3nZ_u0ckVSw1Pg"
     );
     const model = genAI.getGenerativeModel({
       model: "gemini-1.5-flash",
