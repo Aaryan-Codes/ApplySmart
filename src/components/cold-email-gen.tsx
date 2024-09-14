@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { GoogleGenerativeAI, GenerativeModel } from "@google/generative-ai";
+import { GoogleGenerativeAI, GenerativeModel, ChatSession } from "@google/generative-ai";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -27,7 +27,7 @@ interface FormData {
 }
 
 export default function ColdEmailGenerator() {
-  const [chatSession, setChatSession] = useState<GenerativeModel | null>(null);
+  const [chatSession, setChatSession] = useState<ChatSession | null>(null);
   const [emailTemplate, setEmailTemplate] = useState<string>("");
   const [isGenerating, setIsGenerating] = useState<boolean>(false);
   const [isDialogOpen, setIsDialogOpen] = useState<boolean>(false);
