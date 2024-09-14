@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { GoogleGenerativeAI, GenerativeModel } from "@google/generative-ai";
+import { GoogleGenerativeAI, GenerativeModel, ChatSession } from "@google/generative-ai";
 import {
   Card,
   CardContent,
@@ -28,7 +28,7 @@ interface FormData {
 }
 
 export default function CoverLetterGenerator() {
-  const [chatSession, setChatSession] = useState<GenerativeModel | null>(null);
+  const [chatSession, setChatSession] = useState<ChatSession | null>(null);
   const [coverLetter, setCoverLetter] = useState<string>("");
   const [isGenerating, setIsGenerating] = useState<boolean>(false);
   const [isDialogOpen, setIsDialogOpen] = useState<boolean>(false);
