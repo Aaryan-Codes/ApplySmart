@@ -3,7 +3,6 @@
 import { useState } from "react";
 import {
   GoogleGenerativeAI,
-  GenerativeModel,
   ChatSession,
 } from "@google/generative-ai";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";

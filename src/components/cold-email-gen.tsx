@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { GoogleGenerativeAI, GenerativeModel, ChatSession } from "@google/generative-ai";
+import { GoogleGenerativeAI, ChatSession } from "@google/generative-ai";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
