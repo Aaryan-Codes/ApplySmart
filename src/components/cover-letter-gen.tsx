@@ -72,12 +72,13 @@ export default function CoverLetterGenerator() {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData: FormData = {
-      jobDescription: event.currentTarget.jobDescription.value,
-      role: event.currentTarget.role.value,
-      companyName: event.currentTarget.companyName.value,
+      jobDescription: event.currentTarget.jobDescription?.value || '',
+      role: event.currentTarget.role?.value || '',
+      companyName: event.currentTarget.companyName?.value || '',
     };
     await initializeChat(formData);
   };
+  
 
   return (
     <div className="w-full px-10 py-6">
